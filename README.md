@@ -1,3 +1,3 @@
 # Django Marketplace
-The Django Marketplace project is a practice code for web development, with project walkthroughs provided by the freeCodeCamp course here :
+The Django Marketplace project is a practice code for web development, with project walkthroughs provided by the freeCodeCamp course :
 [Learn Django by Building an Online Marketplace – Tutorial for Beginners](https://link-url-here.org)
