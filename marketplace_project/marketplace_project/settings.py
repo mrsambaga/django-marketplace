@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'marketplace_app',
     'item',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
