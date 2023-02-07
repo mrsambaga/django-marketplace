@@ -7,7 +7,7 @@ from .forms import *
 # Create your views here.
 
 def items(request):
-    category_id = request.GET.get('category', 0)
+    category_id = int(request.GET.get('category', 0))
     query = request.GET.get('query', '')
     items = Item.objects.filter(is_sold=False)
     categories = Category.objects.all()
@@ -16,7 +16,7 @@ def items(request):
         items = items.filter(category_id=category_id)
 
     if query:
-        items = items.filter(Q(name_icontains=query) | Q(description_icontains=query))
+        items = items.filter(Q(name__icontains=query) | Q(description__icontains=query))
 
     return render(request, 'item/items.html', {'items':items, 'query':query, 'categories':categories, 'category_id':int(category_id)})
 
